@@ -1,12 +1,15 @@
 @white: #fff;
 @primary: #653a2d;
 @orange: #f48c3b; 
+@green: #50AE4A;
 @menuHeight: 84px;
+
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: @white;
   }
+
 
 header {
   .navbar-default {
@@ -42,4 +45,54 @@ header {
       }
     }
   }
-} 
+}
+
+footer {
+  background-color: white;
+  #footer{
+    display: none; //WIP: Hide this section by the admin page
+    & + div {
+      text-align: center;
+    }
+  }
+  //WIP: this Id must be created in footer section changing the markdown
+  /*
+  <div class="mt32 mb32">
+    <div id="copy" class="text-muted" itemscope="itemscope" itemtype="http://schema.org/Organization">
+      ...
+    </div>
+  </div>
+  */
+  #copyright {
+    text-align: center;
+  }
+}
+
+//Product Detail
+#product_details {
+  h1 {
+    color: @primary;
+  }
+  #add_to_cart {
+    border-radius: 0;
+    background-color: @orange;
+    border-color: @orange;
+    text-transform: @orange;
+  }
+  h4.oe_price_h4 {
+    color: @green
+  }
+}
+//accordion
+.s_faq_collapse {
+  h2.page-header {
+    color: @primary
+  }
+  .panel-group {
+    .panel-heading {
+      color: @white;
+      background-color: @primary;
+    }
+  }
+}
+
