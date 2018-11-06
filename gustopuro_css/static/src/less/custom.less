@@ -1,12 +1,42 @@
 @white: #fff;
+@primary: #653a2d;
+@orange: #f48c3b; 
+@menuHeight: 84px;
+
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: green;
+  color: @white;
   }
 
 header {
   .navbar-default {
     background-color: @white;
     border-color: @white;
+    height: @menuHeight;
+    .navbar-nav {
+      li {
+        a {
+          color: @primary;
+          padding-top: 0;
+          padding-bottom: 0;
+          line-height: @menuHeight;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 700;
+          font-family: 'Raleway'
+        }
+        &.divider {
+          border-right: 1px solid @primary;
+          margin-top: 17px;
+          height: 50px;
+        }
+      }
+      > li.active {
+        >  a, a:hover {
+          background-color: @white;
+          color: @orange;
+        }
+      }
+    }
   }
 } 
