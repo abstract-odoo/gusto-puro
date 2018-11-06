@@ -44,6 +44,24 @@ header {
   }
 }
 
-#footer{
-  display: none; //WIP: Hide this section by the admin page
+footer {
+  background-color: white;
+  #footer{
+    display: none; //WIP: Hide this section by the admin page
+    & + div {
+      text-align: center;
+    }
+  }
+  //WIP: this Id must be created in footer section changing the markdown
+  /*
+  <div class="mt32 mb32">
+    <div id="copy" class="text-muted" itemscope="itemscope" itemtype="http://schema.org/Organization">
+      ...
+    </div>
+  </div>
+  */
+  #copyright {
+    text-align: center;
+  }
 }
+
