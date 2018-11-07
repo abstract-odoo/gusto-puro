@@ -5,10 +5,12 @@
 @menuHeight: 84px;
 @logoHeight: 54px;
 
+body {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+}  
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: @white;
-  }
-
+  color: @primary;
+}
 //logo
 .navbar-brand.logo {
   display: flex;
@@ -76,10 +78,23 @@ footer {
   }
 }
 
+.breadcrumb {
+  background-color: @white;
+  li a {
+    color: lighten(@primary, 70%);
+  } 
+  li.active a {
+    color: @primary;
+    font-weight: 700;
+  }
+}
+
 //Product Detail
 #product_details {
+
   h1 {
     color: @primary;
+    font-weight: 700;
   }
   #add_to_cart {
     border-radius: 0;
@@ -90,8 +105,16 @@ footer {
   h4.oe_price_h4 {
     color: @green;
     text-align: right;
+    font-size: 24px;
+  }
+  .css_quantity {
+    .input-group-addon {
+      background-color: @white;
+      border-style: none;
+    }
   }
 }
+
 //accordion
 .s_faq_collapse {
   h2.page-header {
@@ -104,4 +127,44 @@ footer {
     }
   }
 }
+//List and search
+.products_pager {
+  .o_website_sale_search {
+    .oe_search_box, .oe_search_button {
+      background-color: lighten(@primary, 65%);
+      color: @primary;
+      border-style: none;
+      border-radius: 0;
+      height: 34px;
+    }
+  }
+  .dropdown_sorty_by {
+    .dropdown-toggle {
+      background-color: lighten(@primary, 65%);
+      color: @primary;
+      border-style: none;
+      border-radius: 0;
+    }
+  }
+}
 
+//Products List
+.oe_product {
+  height: 350px;
+  border-style: none;
+  h5 {
+    text-align: center;
+    a {
+      color: @primary;
+    }
+  }
+  .product_price {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: @green;
+    a.btn.a-submit {
+      margin-left: 20px;
+    }
+  }
+}
