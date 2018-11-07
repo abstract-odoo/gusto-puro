@@ -5,8 +5,6 @@
 @menuHeight: 84px;
 @logoHeight: 54px;
 
-
-
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: @white;
   }
@@ -15,8 +13,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-brand.logo {
   display: flex;
   align-items: center;
+  height: @menuHeight;
   img {
-    height: @logoHeight;
+    max-height: @logoHeight;
   }
 }
 
@@ -89,7 +88,8 @@ footer {
     text-transform: @orange;
   }
   h4.oe_price_h4 {
-    color: @green
+    color: @green;
+    text-align: right;
   }
 }
 //accordion
