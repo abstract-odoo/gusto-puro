@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 header {
   .navbar-default {
+    border-bottom: solid 1px lighten(@primary, 50%) !important;
     background-color: @white;
     border-color: @white;
     height: @menuHeight;
@@ -81,9 +82,9 @@ footer {
 .breadcrumb {
   background-color: @white;
   li a {
-    color: lighten(@primary, 70%);
+    color: lighten(@primary, 40%);
   } 
-  li.active a {
+  li.active {
     color: @primary;
     font-weight: 700;
   }
@@ -91,7 +92,9 @@ footer {
 
 //Product Detail
 #product_details {
-
+  .oe_search {
+    display: none;
+  }
   h1 {
     color: @primary;
     font-weight: 700;
