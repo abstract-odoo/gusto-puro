@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 header {
   .navbar-default {
+    .navbar-collapse {
+      background-color: @white;
+    }
     border-bottom: solid 1px lighten(@primary, 50%) !important;
     background-color: @white;
     border-color: @white;
@@ -128,6 +131,9 @@ footer {
       color: @white;
       background-color: @primary;
     }
+    .panel-body * {
+      color: @primary
+    }
   }
 }
 //List and search
@@ -168,6 +174,43 @@ footer {
     color: @green;
     a.btn.a-submit {
       margin-left: 20px;
+    }
+  }
+}
+
+//Cart
+.my_cart_quantity.label-primary {
+  border-color: @orange;
+  background-color: @orange;
+}
+.popover.mycart-popover .btn-primary {
+  border-color: @orange;
+  background-color: @orange;
+}
+.oe_website_sale {
+  .wizard {
+    .text-primary {
+      background-color: @green;
+      color: @white;
+      span:before {
+        border-left: 10px solid @green!important;
+      }
+    }
+    /*
+    .text-muted {
+      color: lighten(@primary, 25%)
+    }
+    */
+  }
+  #cart_products tbody tr td:nth-child(2) a {
+    color: @primary
+  }
+  .btn-primary {
+    border-color: @orange;
+    background-color: @orange;
+    &:hover {
+      border-color: darken(@orange, 25%);
+      background-color: darken(@orange, 15%);
     }
   }
 }
